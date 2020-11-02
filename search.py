@@ -7,6 +7,10 @@ import csv
 with open('source.csv', 'w') as csv_file:
     writer = csv.writer(csv_file)
     writer.writerow(["ねずこ","たんじろう","きょうじゅろう","ぎゆう","げんや","かなお","ぜんいつ"])
+### yoneya 書き込み値は固定値ではなく、source関数内で追記されたrowの値を書き込むようにします
+### このままですと、ＣＳＶ書き込み、ＣＳＶ読み込みののちにsearch関数が呼び出されるため
+### search関数内にＣＳＶ書き込み、読み込みの処理を含めるようにお願いします。
+### CSV読み込みで読み込んだ値は、rowに格納するようにします
 
 ### 検索ツール
 
